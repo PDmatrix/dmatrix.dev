@@ -7,14 +7,30 @@ tags:
 ---
 ## --- Day 4: The Ideal Stocking Stuffer ---
 
-description
+Today, we are going to mine some AdventCoins. For this we need to find MD5 hashes which, in hexadecimal, start with at least five zeroes. The input to the MD5 hash is some secret key followed by a number in decimal. We need to find the lowest number that produces such a hash.
 
 ### Part 1
 
 part1
+https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string
+Faster Version
 
 ```
-code
+private static string CreateMd5(string input)
+{
+  using (var md5 = MD5.Create())
+  {
+    var inputBytes = Encoding.ASCII.GetBytes(input);
+    var hashBytes = md5.ComputeHash(inputBytes);
+    var sb = new StringBuilder();
+    foreach (var hashByte in hashBytes)
+    {
+      sb.Append(hashByte.ToString("X2"));
+    }
+
+    return sb.ToString();
+  }
+}
 ```
 
 ### Part 2
