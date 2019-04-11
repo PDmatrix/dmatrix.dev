@@ -7,13 +7,11 @@ tags:
 ---
 ## --- Day 4: The Ideal Stocking Stuffer ---
 
-Today, we are going to mine some AdventCoins. For this we need to find MD5 hashes which, in hexadecimal, start with at least five zeroes. The input to the MD5 hash is some secret key followed by a number in decimal. We need to find the lowest number that produces such a hash.
+Today, we are going to mine some AdventCoins. For this we need to find MD5 hashes which, in hexadecimal, start with at least five zeroes. The input to the MD5 hash is some secret key followed by a number in decimal. We need to find the lowest number that produces such hash.
 
 ### Part 1
 
-part1
-https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string
-Faster Version
+In order to get hash from string I took function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string)
 
 ```
 private static string CreateMd5(string input)
