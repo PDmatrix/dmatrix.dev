@@ -7,11 +7,11 @@ tags:
 ---
 ## --- Day 4: The Ideal Stocking Stuffer ---
 
-Today, we are going to mine some AdventCoins. For this we need to find MD5 hashes which, in hexadecimal, start with at least five zeroes. The input to the MD5 hash is some secret key followed by a number in decimal. We need to find the lowest number that produces such hash.
+Today, we are going to mine some AdventCoins. For this, we need to find MD5 hashes which, in hexadecimal, start with at least five zeroes. The input to the MD5 hash is some secret key followed by a number in decimal. We need to find the lowest number that produces such a hash.
 
 ### Part 1
 
-In order to get hash from string I took function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string)
+In order to get hash from the string I took a function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string)
 
 ```csharp
 private static string CreateMd5(string input)
@@ -31,7 +31,7 @@ private static string CreateMd5(string input)
 }
 ```
 
-And then I used it to generate new hash and when the hash starts with five zeros I return the number
+And then I used it to generate the new hash and when the hash starts with five zeros I return the number.
 
 ```csharp
 public string Part1(IEnumerable<string> input)
@@ -51,7 +51,7 @@ public string Part1(IEnumerable<string> input)
 
 ### Part 2
 
-In the second part I need to find hash that starts at least with **6 zeroes**. Resulting code is essentialy the same except one line where I check hash for six zeroes.
+In the second part, I need to find the hash that starts at least with **6 zeroes**. The resulting code is essentially the same except one line where I check hash for six zeroes.
 
 ```csharp{8}
 public string Part2(IEnumerable<string> input)
