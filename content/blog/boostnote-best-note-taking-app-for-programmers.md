@@ -1,5 +1,5 @@
 ---
-title: Boostnote - best note-taking app for programmers
+title: Best note-taking app for programmers
 date: 2019-04-12T07:42:52.042Z
 description: >-
   Boostnote - best note-taking app for programmers. Boost Happiness,
