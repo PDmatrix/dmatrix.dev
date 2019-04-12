@@ -31,12 +31,42 @@ private static string CreateMd5(string input)
 }
 ```
 
-### Part 2
-
-part2
+And then I used it to generate new hash and when the hash starts with five zeros I return the number
 
 ```csharp
-code
+public string Part1(IEnumerable<string> input)
+{
+  var key = input.First();
+  var number = 1;
+  while (true)
+  {
+    var hash = CreateMd5($"{key}{number}");
+    if(hash.StartsWith("00000"))
+      break;
+    number++;
+  }
+  return number.ToString();
+}
+```
+
+### Part 2
+
+In the second part I need to find hash that starts at least with **6 zeroes**. Resulting code is essentialy the same except one line where I check hash for six zeroes.
+
+```csharp{7}
+public string Part2(IEnumerable<string> input)
+{
+  var key = input.First();
+  var number = 1;
+  while (true)
+  {
+    var hash = CreateMd5($"{key}{number}");
+    if(hash.StartsWith("000000"))
+      break;
+    number++;
+  }
+  return number.ToString();
+}
 ```
 
 - - -
