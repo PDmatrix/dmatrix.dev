@@ -53,7 +53,7 @@ public string Part1(IEnumerable<string> input)
 
 In the second part I need to find hash that starts at least with **6 zeroes**. Resulting code is essentialy the same except one line where I check hash for six zeroes.
 
-```csharp{7}
+```csharp{8}
 public string Part2(IEnumerable<string> input)
 {
   var key = input.First();
