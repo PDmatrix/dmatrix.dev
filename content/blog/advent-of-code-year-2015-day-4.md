@@ -13,7 +13,7 @@ Today, we are going to mine some AdventCoins. For this we need to find MD5 hashe
 
 In order to get hash from string I took function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string)
 
-```
+```csharp
 private static string CreateMd5(string input)
 {
   using (var md5 = MD5.Create())
