@@ -1,6 +1,6 @@
 ---
 title: Advent of Code. Year 2015. Day 4
-date: 2019-04-08T22:42:51.075Z
+date: 2019-04-11T22:42:51.075Z
 description: Solution to Advent of Code Year 2015 - Day 4
 tags:
   - aoc-2015
