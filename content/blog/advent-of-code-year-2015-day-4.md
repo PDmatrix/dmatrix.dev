@@ -11,7 +11,7 @@ Today, we are going to mine some AdventCoins. For this, we need to find MD5 hash
 
 ### Part 1
 
-In order to get hash from the string I took a function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string)
+In order to get hash from the string I took a function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string) and slightly modified it.
 
 ```csharp
 private static string CreateMd5(string input)
