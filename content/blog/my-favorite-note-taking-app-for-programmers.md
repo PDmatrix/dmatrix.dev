@@ -16,12 +16,11 @@ I used this tool for a while and I quite liked it, but there was one downside - 
 
 _INSERT IMAGE OF BOOSTNOTE_
 
-Boostnote has a lot of options for customizing from font size and theme to editor keymap.
-I can create my own unique editor and interface. Also, it has very simple interface which everyone can easily understand. As for the functionality, Boostnote offers two types of notes: 
+Boostnote has a lot of options for customizing from font size and theme to editor keymap. I can create my own unique editor and interface. Also, it has a very simple interface which everyone can easily understand. As for the functionality, Boostnote offers two types of notes: 
   - markdown note - which can be exported to HTML
   - snippet - snippet
 
-Overall, I really like Boostnote, and personally think that this is the best note-taking app for programmers.
+Overall, I really like Boostnote, and personally, I think that this is the best note-taking app for programmers.
 
 > Boostnote claims that it will **Boost Happiness, Productivity, and Creativity** and it certainly really did mine 😊
 
