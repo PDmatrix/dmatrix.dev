@@ -14,5 +14,9 @@ To interact with my gists, I found this snippet manager called [Lepton](https://
 
 I used this tool for a while and I quite liked it, but there was one downside - lack of customization. I can't pick my preferred theme, I can't pick font style and etc. Obviosly you can live without these features and I could. But I found an alternative which can handle all that - [Boostnote](https://boostnote.io/)
 
+_INSERT IMAGE OF BOOSTNOTE_
+
+> Boostnote claims that it will **Boost Happiness, Productivity and Creativity** and it certainly really did mine 😊
+
 * Lepton
 * Boostnote
