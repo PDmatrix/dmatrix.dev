@@ -7,5 +7,8 @@ description: >-
 tags:
   - software
 ---
+Recently, I decided to start saving useful links and videos, that I am going to watch or watched already. In order to do that I needed a place where I can store all these items. My first decision was [Github Gist](https://gist.github.com/) with secret gists.
+To interact with my gists, I found this snippet manager called [Lepton](https://github.com/hackjutsu/Lepton)
+
 * Lepton
 * Boostnote
