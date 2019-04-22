@@ -16,7 +16,7 @@ I used this tool for a while and I quite liked it, but there was one downside - 
 
 _INSERT IMAGE OF BOOSTNOTE_
 
-> Boostnote claims that it will **Boost Happiness, Productivity and Creativity** and it certainly really did mine 😊
+> Boostnote claims that it will **Boost Happiness, Productivity, and Creativity** and it certainly really did mine 😊
 
 * Lepton
 * Boostnote
