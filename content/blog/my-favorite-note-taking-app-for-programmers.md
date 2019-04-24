@@ -28,4 +28,6 @@ As for the iOS and Android, Boostnote had an app, but it was [closed](https://gi
 
 Overall, I really like Boostnote, and personally, I think that this is the best note-taking app for programmers.
 
+---
+
 Boostnote claims that it will **Boost Happiness, Productivity, and Creativity** and it certainly really did mine 😊
