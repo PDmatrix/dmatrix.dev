@@ -23,7 +23,8 @@ Boostnote has a lot of options for customizing from font size and theme to edito
 
 Also, it's very easy to setup a cloud storage so you can use Boostnote on multiple devices.
 
-As for the iOS and Android 
+As for the iOS and Android, Boostnote had an app, but it was [closed](https://github.com/BoostIO/boostnote-mobile#temporary-stop).
+> Code quality is too bad and the original maintainer left this project quite ago
 
 Overall, I really like Boostnote, and personally, I think that this is the best note-taking app for programmers.
 
