@@ -14,7 +14,20 @@ body
 part1
 
 ```csharp
-code1
+public string Part1(IEnumerable<string> input)
+{
+  bool HasThreeVowels(string str) => 
+    Regex.Matches(str, @"[aeiou]").Count >= 3;
+
+  bool HasDoubledLetter(string str) => 
+    Regex.IsMatch(str, @"(\w)\1");
+
+  bool ContainsNaughtyStrings(string str) => 
+    Regex.IsMatch(str, @"ab|cd|pq|xy");
+
+  var niceStrings = input.Count(str => HasThreeVowels(str) && HasDoubledLetter(str) && !ContainsNaughtyStrings(str));
+  return niceStrings.ToString();
+}
 ```
 
 ### Part 2
@@ -22,7 +35,17 @@ code1
 part2
 
 ```csharp
-code2
+public string Part2(IEnumerable<string> input)
+{
+  bool HasPair(string str) => 
+    Regex.IsMatch(str, @"(\w{2}).*\1");
+
+  bool HasDuplicate(string str) => 
+    Regex.IsMatch(str, @"(\w).\1");
+
+  var niceStrings = input.Count(str => HasDuplicate(str) && HasPair(str));
+  return niceStrings.ToString();
+}
 ```
 
 - - -
