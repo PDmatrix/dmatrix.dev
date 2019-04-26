@@ -22,6 +22,8 @@ Boostnote has a lot of options for customizing from font size and theme to edito
   - markdown note - can hold only one note in markdown
   - snippet - can hold multiple snippets of code
 
+![Two types of notes](/images/uploads/my-favorite-note-taking-app-for-programmers__boostnote_two_types.png "Two types of notes")
+
 Also, it's very easy to set up cloud storage so you can use Boostnote on multiple devices.
 
 As for the iOS and Android, Boostnote had an app, but it was [closed](https://github.com/BoostIO/boostnote-mobile#temporary-stop).
