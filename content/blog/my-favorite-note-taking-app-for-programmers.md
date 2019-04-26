@@ -14,7 +14,7 @@ To interact with my gists, I found this snippet manager called [Lepton](https://
 
 I used this tool for a while and I quite liked it, but there was one downside - lack of customization. I can't pick my preferred theme, I can't pick font style and etc. Obviously, you can live without these features and I could. But I found an alternative which can handle all that - [Boostnote](https://boostnote.io/)
 
-_INSERT IMAGE OF BOOSTNOTE_
+![Boostnote](/images/uploads/my-favorite-note-taking-app-for-programmers__boostnote.png "Boostnote")
 
 Boostnote has a lot of options for customizing from font size and theme to editor keymap. I can create my own unique editor and interface. Also, it has a very simple interface which everyone can easily understand. As for the functionality, Boostnote offers two types of notes: 
 
