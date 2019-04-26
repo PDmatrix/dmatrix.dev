@@ -19,8 +19,8 @@ I used this tool for a while and I quite liked it, but there was one downside - 
 
 Boostnote has a lot of options for customizing from font size and theme to editor keymap. I can create my own unique editor and interface. Also, it has a very simple interface which everyone can easily understand. As for the functionality, Boostnote offers two types of notes: 
 
-  - markdown note - can hold only one note in markdown
-  - snippet - can hold multiple snippets of code
+  - **Markdown Note** - can hold only one note in markdown
+  - **Snippet Note** - can hold multiple snippets of code
 
 ![Two types of notes](/images/uploads/my-favorite-note-taking-app-for-programmers__boostnote_two_types.png "Two types of notes")
 
