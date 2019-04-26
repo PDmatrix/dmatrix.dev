@@ -25,7 +25,12 @@ public string Part1(IEnumerable<string> input)
   bool ContainsNaughtyStrings(string str) => 
     Regex.IsMatch(str, @"ab|cd|pq|xy");
 
-  var niceStrings = input.Count(str => HasThreeVowels(str) && HasDoubledLetter(str) && !ContainsNaughtyStrings(str));
+  bool IsNiceString(string str) =>
+    HasThreeVowels(str)
+    && HasDoubledLetter(str)
+    && !ContainsNaughtyStrings(str);
+
+  var niceStrings = input.Count(IsNiceString);
   return niceStrings.ToString();
 }
 ```
@@ -43,7 +48,11 @@ public string Part2(IEnumerable<string> input)
   bool HasDuplicate(string str) => 
     Regex.IsMatch(str, @"(\w).\1");
 
-  var niceStrings = input.Count(str => HasDuplicate(str) && HasPair(str));
+  bool IsNiceString(string str) =>
+    HasDuplicate(str)
+    && HasPair(str);
+
+  var niceStrings = input.Count(IsNiceString);
   return niceStrings.ToString();
 }
 ```
