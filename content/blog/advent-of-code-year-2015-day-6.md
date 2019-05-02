@@ -11,9 +11,9 @@ In today's challenge, we need to deploy one million lights in a 1000x1000 grid. 
 
 ### Part 1
 
-In the first part we need to count how many lights are lit after all instructions.
+In the first part, we need to count how many lights are lit after all instructions.
 
-First of all, I created an Instruction class which consist of StartX, StartY, EndX, EndY and an Operation
+First of all, I created an Instruction class which consist of StartX, StartY, EndX, EndY, and an Operation
 
 ```csharp
 private class Instruction
@@ -26,7 +26,7 @@ private class Instruction
 }
 ```
 
-Next, I created a function which parses input and returns list of Instuction objects
+Next, I created a function which parses the input and returns a list of Instruction objects
 
 ```csharp
 private static IEnumerable<Instruction> GetInstructions(IEnumerable<string> input)
