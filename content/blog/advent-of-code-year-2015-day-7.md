@@ -7,12 +7,12 @@ tags:
 ---
 ## --- Day 7: Some Assembly Required ---
 
-In this challenge, we need to help little Bobby Tables to assemble the circuit. In order to do this, we have a booklet that describes how to connect parts together: `x AND y -> z` means to connect x and y to an AND gate, and then connect its output to wire z.
+In this challenge, we need to help little Bobby Tables to assemble the circuit. In order to do this, we have a booklet that describes how to connect parts together: `x AND y -> z` means to connect `x` and `y` to an `AND` gate, and then connect its output to wire `z`.
 
 ### Part 1
 
 We need to find out, which signal is ultimately provided to *wire `a`*.
-My solution is based on recursive function which can calculate value of given wire. For example, we have such instructions:
+My solution is based on recursive function which can calculate value of a given wire. For example, imagine that we have such instructions:
 
 ```
 123 -> x
@@ -25,15 +25,16 @@ NOT x -> h
 NOT y -> i
 ```
 
-What will happen if I call `Process("d")`?.
+And here's what happens if I call `Process("d")`:
 * It gets instructions based on wire `d`, in our case it will be `["x", "AND", "y", "->", "d"]`
-* GetValue, where based on instruction calculated new value
-* `Process("x")` will be called
-* GetValue will return `123` because there is no other operation
-* `Process("y")` will be called
+* Then, function GetValue(instructions) is called, where based on instructions calculated new value
+* Inside GetValue a new `Process("x")` will be called
+* Process("x") once again will call GetValue with the new instructions `["123", "->", "x"]`
+* GetValue will return `123`, because there is no other operation
+* Process("y") once again will call GetValue with the new instructions `["456", "->", "x"]`
 * GetValue will return `456` because there is no other operation
-* Updating _instructions, so that we don't have to compute same value again, so new value will be `["72", "->", "d"]`
-* Returning value
+* After that, in original Process `_instructions` will be updated to a new value `["72", "->", "d"]`, so that we don't have to compute same value again 
+* Finally, computed value returns
 
 ```csharp
 private Dictionary<string, string[]> 
