@@ -7,21 +7,99 @@ tags:
 ---
 ## --- Day 7: Some Assembly Required ---
 
-In today's challenge, we need to deploy one million lights in a 1000x1000 grid. Furthermore, Santa has mailed us instructions on how to display an ideal lighting configuration.
+In this challenge, we need to help little Bobby Tables to assemble the circuit. In order to do this, we have a booklet that describes how to connect parts together: `x AND y -> z` means to connect x and y to an AND gate, and then connect its output to wire z.
 
 ### Part 1
 
-Part1
+We need to find out, which signal is ultimately provided to *wire `a`*.
+My solution is based on recursive function which can calculate value of given wire. For example, we have such instructions:
+
+```
+123 -> x
+456 -> y
+x AND y -> d
+x OR y -> e
+x LSHIFT 2 -> f
+y RSHIFT 2 -> g
+NOT x -> h
+NOT y -> i
+```
+
+What will happen if I call `Process("d")`?.
+* It gets instructions based on wire `d`, in our case it will be `["x", "AND", "y", "->", "d"]`
+* GetValue, where based on instruction calculated new value
+* `Process("x")` will be called
+* GetValue will return `123` because there is no other operation
+* `Process("y")` will be called
+* GetValue will return `4561` because there is no other operation
+* Updating _instructions, so that we don't have to compute same value again, so new value will be `["72", "->", "d"]`
+* Returning value
 
 ```csharp
-code
+private Dictionary<string, string[]> 
+            _instructions = new Dictionary<string, string[]>();
+
+private int Process(string input)
+{
+  var ins = _instructions[input];
+  var value = GetValue(ins); 
+  _instructions[input] = new[] { value.ToString(), "->", input };
+  return value;
+}
+
+private int GetValue(IReadOnlyList<string> instruction)
+{
+  int ComputeValue(string x) => char.IsLetter(x[0]) ? Process(x) : int.Parse(x);
+  int Assign(IReadOnlyList<string> x) => ComputeValue(x[0]);
+  int And(IReadOnlyList<string> x) => ComputeValue(x[0]) & ComputeValue(x[2]);
+  int Or(IReadOnlyList<string> x) => ComputeValue(x[0]) | ComputeValue(x[2]);
+  int LShift(IReadOnlyList<string> x) => ComputeValue(x[0]) << ComputeValue(x[2]);
+  int RShift(IReadOnlyList<string> x) => ComputeValue(x[0]) >> ComputeValue(x[2]);
+  int Not(IReadOnlyList<string> x) => ~ComputeValue(x[1]);
+  
+  switch (instruction[1])
+  {
+    case "->":
+      return Assign(instruction);
+    case "AND":
+      return And(instruction);
+    case "OR":
+      return Or(instruction);
+    case "LSHIFT":
+      return LShift(instruction);
+    case "RSHIFT":
+      return RShift(instruction);
+    default:
+      return instruction[0] == "NOT" ? Not(instruction) : 0;
+  }
+}
+```
+
+When I got all this code, I needed only populate `_instructions` and then to compute the value of wire `a` by only calling `Process("a")`
+
+```csharp
+public string Part1(IEnumerable<string> input)
+{
+  _instructions = input.Select(r => r.Split()).ToDictionary(r => r.Last());
+  var value = Process("a");
+  return value.ToString();
+}
 ```
 
 ### Part 2
 
+In the second part, after I computed the value of wire `a` I needed to override wire `b` to that signal, and reset the other wires (including wire `a`). After that, I needed again to find the value of wire `a`
 
 ```csharp
-code
+public string Part2(IEnumerable<string> input)
+{
+  var enumerable = input as string[] ?? input.ToArray();
+  _instructions = enumerable.Select(r => r.Split()).ToDictionary(r => r.Last());
+  var value = Process("a");
+  _instructions = enumerable.Select(r => r.Split()).ToDictionary(r => r.Last());
+  _instructions["b"] = new []{value.ToString(), "->", "b"};
+  return Process("a").ToString();
+}
 ```
 
 - - -
