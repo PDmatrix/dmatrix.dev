@@ -31,7 +31,7 @@ What will happen if I call `Process("d")`?.
 * `Process("x")` will be called
 * GetValue will return `123` because there is no other operation
 * `Process("y")` will be called
-* GetValue will return `4561` because there is no other operation
+* GetValue will return `456` because there is no other operation
 * Updating _instructions, so that we don't have to compute same value again, so new value will be `["72", "->", "d"]`
 * Returning value
 
