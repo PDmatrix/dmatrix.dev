@@ -26,15 +26,15 @@ NOT y -> i
 ```
 
 And here's what happens if I call `Process("d")`:
-* It gets instructions based on wire `d`, in our case it will be `["x", "AND", "y", "->", "d"]`
-* Then, function GetValue(instructions) is called, where based on instructions calculated new value
-* Inside GetValue a new `Process("x")` will be called
-* Process("x") once again will call GetValue with the new instructions `["123", "->", "x"]`
-* GetValue will return `123`, because there is no other operation
-* Process("y") once again will call GetValue with the new instructions `["456", "->", "x"]`
-* GetValue will return `456` because there is no other operation
-* After that, in original Process `_instructions` will be updated to a new value `["72", "->", "d"]`, so that we don't have to compute same value again 
-* Finally, computed value returns
+* It gets instructions based on wire `d`, in our case it will be `["x", "AND", "y", "->", "d"]`.
+* Then, function GetValue(instructions) is called, where based on instructions will be calculated a new value.
+* Inside GetValue a new `Process("x")` will be called.
+* Process("x") once again will call GetValue with the new instructions `["123", "->", "x"]`.
+* GetValue will return `123` because there is no other operation.
+* Process("y") once again will call GetValue with the new instructions `["456", "->", "x"]`.
+* GetValue will return `456` because there is no other operation.
+* After that, in original Process `_instructions` will be updated to a new value `["72", "->", "d"]`, so that we don't have to compute same value again.
+* Finally, computed value returns.
 
 ```csharp
 private Dictionary<string, string[]> 
@@ -76,7 +76,7 @@ private int GetValue(IReadOnlyList<string> instruction)
 }
 ```
 
-When I got all this code, I needed only populate `_instructions` and then to compute the value of wire `a` by only calling `Process("a")`
+When I got all this code, I needed only populate `_instructions` and then to compute the value of wire `a` by only calling `Process("a")`.
 
 ```csharp
 public string Part1(IEnumerable<string> input)
@@ -89,7 +89,7 @@ public string Part1(IEnumerable<string> input)
 
 ### Part 2
 
-In the second part, after I computed the value of wire `a` I needed to override wire `b` to that signal, and reset the other wires (including wire `a`). After that, I needed again to find the value of wire `a`
+In the second part, after I computed the value of wire `a` I needed to override wire `b` to that signal, and reset the other wires (including wire `a`). After that, I needed again to find the value of wire `a`.
 
 ```csharp
 public string Part2(IEnumerable<string> input)
