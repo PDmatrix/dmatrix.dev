@@ -7,22 +7,66 @@ tags:
 ---
 ## --- Day 8: Matchsticks ---
 
-description
+Today, we are going to count the difference between the number of characters *in the code representation of the string literal* and *the number of characters in the in-memory string itself*.
 
 ### Part 1
 
-part1
+In the first part, we have a list of an escaped string literal, and all we have to do is to count how many total characters there are minus characters in-memory string itself. To do this, we just loop through a string and incrementing `numberOfCharsMemory` variable each iteration. If the value appears to be escaped, we just increasing index.
 
 ```csharp
-code1
+public string Part1(IEnumerable<string> lines)
+{
+  int numberOfCharsLiteral = 0, numberOfCharsMemory = 0;
+  foreach (var line in lines)
+  {
+    numberOfCharsLiteral += line.Length;
+    var mutable = line.Substring(1, line.Length - 2);
+    var idx = 0;
+    while (idx < mutable.Length)
+    {
+      switch (mutable[idx])
+      {
+        case '\\' when idx + 1 != mutable.Length - 1 && mutable[idx + 1] == 'x':
+          idx += 3;
+          break;
+        case '\\':
+          idx++;
+          break;
+      }
+
+      idx++;
+      numberOfCharsMemory++;
+    }
+  }
+  return (numberOfCharsLiteral - numberOfCharsMemory).ToString();
+}
 ```
 
 ### Part 2
 
-part2
+In the second part, we need to encode string and count new length of that string.
 
 ```csharp
-code2
+public string Part2(IEnumerable<string> lines)
+{
+  int numberOfCharsLiteral = 0, numberOfNewCharsLiteral = 0;
+  foreach (var line in lines)
+  {
+    numberOfCharsLiteral += line.Length;
+    var mutable = line;
+    foreach (var c in mutable)
+    {
+      if (c == '"' || c == '\\')
+      {
+        numberOfNewCharsLiteral++;
+      }
+      numberOfNewCharsLiteral++;
+    }
+
+    numberOfNewCharsLiteral += 2;
+  }
+  return (numberOfNewCharsLiteral - numberOfCharsLiteral).ToString();
+}
 ```
 
 - - -
