@@ -11,7 +11,7 @@ Today, we are going to count the difference between the number of characters *in
 
 ### Part 1
 
-In the first part, we have a list of an escaped string literal, and all we have to do is to count how many total characters there are minus characters in-memory string itself. To do this, we just loop through a string and incrementing `numberOfCharsMemory` variable each iteration. If the value appears to be escaped, we just increasing index.
+In the first part, we have a list of an escaped string literal, and all we have to do is to count how many total characters there are minus characters in-memory string itself. To do this, we just loop through a string and increment `numberOfCharsMemory` variable in each iteration. If the value appears to be escaped, then we increase the index.
 
 ```csharp
 public string Part1(IEnumerable<string> lines)
