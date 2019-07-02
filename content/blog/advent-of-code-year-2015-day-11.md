@@ -7,7 +7,7 @@ tags:
 ---
 ## --- Day 11: Corporate Policy ---
 
-In today's puzzle, we need to help Santa to choose his next password. Santa has a method to create the next password based on previous. He does that by **incrementing** his old password string. Also because of corporate policy, a password should pass additional requirements like `Passwords may not contain the letters i, o, or l`.
+In today's puzzle, we need to help Santa to choose his next password. Santa has a method to create the next password based on previous. He does that by **incrementing** his old password string. Also because of corporate policy, a password should pass additional requirements like: `Passwords may not contain the letters i, o, or l`.
 
 ### Part 1
 
