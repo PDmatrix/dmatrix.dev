@@ -32,6 +32,7 @@ private static string Increment(string s)
 Next, I implemented requirements in different methods:
 
 - Passwords must include one increasing straight of at least three letters, like abc, bcd, cde, and so on, up to xyz. They cannot skip letters; abd doesn't count.
+
 ```csharp
 private static bool Increasing(string input)
 {
@@ -48,6 +49,7 @@ private static bool Increasing(string input)
 ```
 
 - Passwords may not contain the letters i, o, or l, as these letters can be mistaken for other characters and are therefore confusing.
+
 ```csharp
 private static bool NotContaining(string input)
 {
@@ -57,6 +59,7 @@ private static bool NotContaining(string input)
 ```
 
 - Passwords must contain at least two different, non-overlapping pairs of letters, like aa, bb, or zz.
+
 ```csharp
 private static bool HasAtLeastTwoDifferentPairs(string input)
 {
