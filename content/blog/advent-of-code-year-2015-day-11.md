@@ -1,6 +1,6 @@
 ---
 title: Advent of Code. Year 2015. Day 11
-date: 2019-06-11T10:10:51.641Z
+date: 2019-07-02T10:10:51.641Z
 description: Solution to Advent of Code Year 2015 - Day 11
 tags:
   - aoc-2015
