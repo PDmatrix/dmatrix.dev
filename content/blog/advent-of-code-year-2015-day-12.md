@@ -7,7 +7,7 @@ tags:
 ---
 ## --- Day 12: JSAbacusFramework.io ---
 
-In today's challenge we have to help Santa's Accounting-Elves.
+In today's challenge we have to help Santa's Accounting-Elves. They have a `JSON` document which contains a variety of things: arrays ([1,2,3]), objects ({"a":1, "b":2}), numbers, and strings.
 
 ### Part 1
 
@@ -32,7 +32,7 @@ public string Part1(IEnumerable<string> lines)
 
 ### Part 2
 
-In the second part, we also need to find the sum of all numbers in `JSON` but this time we need to ignore any object and all of its children which has any value "red".
+In the second part, we also need to find the sum of all numbers in `JSON` but this time we need to ignore any object and all of its children which has any value `"red"`.
 
 This time we can't just parse all numbers, so we have to parse `JSON` itself. To do that, I used a library called `Json.NET`. I created a method that can figure out which method should be called with a given token. For example, if the token is `object`, then `ProcessObject` method will be called.
 
