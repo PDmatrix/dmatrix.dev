@@ -7,7 +7,7 @@ tags:
 ---
 ## --- Day 12: JSAbacusFramework.io ---
 
-In today's challenge we have to help Santa's Accounting-Elves. They have a `JSON` document which contains a variety of things: arrays ([1,2,3]), objects ({"a":1, "b":2}), numbers, and strings.
+In today's challenge we have to help Santa's Accounting-Elves. They have a `JSON` document which contains a variety of things: arrays (`[1,2,3]`), objects (`{"a":1, "b":2}`), numbers, and strings.
 
 ### Part 1
 
