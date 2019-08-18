@@ -5,17 +5,18 @@ description: Solving fun problems with Real Dev, great project for programmers!
 tags:
   - fun
 ---
-Hello everyone! 👋
+Hello everyone! [👋]{.emoji}
 
 Today, I want to tell you about a cool project called **Real Dev**
 
-Real Dev is a platform for solving *real world-like* problems, for example, creating backend API for a frontend application and so on. It's a great way to sharpen your skills as a software developer. Also, it can be used to improve your portfolio! If you like to solve programming puzzles, but you tired of algorithms and math you will like this project. 😊
+Real Dev is a platform for solving *real world-like* problems, for example, creating backend API for a frontend application and so on. It's a great way to sharpen your skills as a software developer. Also, it can be used to improve your portfolio! If you like to solve programming puzzles, but you tired of algorithms and math you will like this project. [😊]{.emoji}
 
 To solve problems you start with picking a task. For now, there are only ten tasks, but in the future, there will be much more. Every task has its level of complexity from *easy* to *hard*. 
 
 There are currently two main languages to write:
 - `Python`
 - `JavaScript` (or `TypeScript`)
+
 If it is not enough, you can use `Dockerfile` or `docker-compose`. This means, that you can write code in pretty much any programming language as long as you can run it via `docker`.
 
 To get started, you need:
