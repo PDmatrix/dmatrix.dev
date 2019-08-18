@@ -7,7 +7,7 @@ tags:
 ---
 Hello everyone! [👋]{.emoji}
 
-Today, I want to tell you about a cool project called **Real Dev**
+Today, I want to tell you about a cool project called [**Real Dev**](https://real.dev)
 
 Real Dev is a platform for solving *real world-like* problems, for example, creating backend API for a frontend application and so on. It's a great way to sharpen your skills as a software developer. Also, it can be used to improve your portfolio! If you like to solve programming puzzles, but you tired of algorithms and math you will like this project. [😊]{.emoji}
 
@@ -22,8 +22,9 @@ If it is not enough, you can use `Dockerfile` or `docker-compose`. This means, t
 To get started, you need:
 
 1) Register account on the [official website](https://real.dev)
-2) Download the [CLI](https://real.dev/docs#cli-the-real-command)
-3) [Pick a task](https://real.dev/tasks) a start solving it
+2) Download and install the [CLI](https://real.dev/docs#cli-the-real-command)
+3) Login via `CLI` using `real login`
+4) [Pick a task](https://real.dev/tasks) and start solving it
 
 I suggest you start with [Hello real world](https://real.dev/task/hello-real-world) task, as it helps you to get familiar with the whole process of submitting a task. After that, you can pick any task that you want and solve it using your *favorite programming language*.
 
