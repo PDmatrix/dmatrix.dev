@@ -31,12 +31,14 @@ To get started, you need:
 3. Login via `CLI` using `real login`
 4. [Pick a task](https://real.dev/tasks) and start solving it
  
+If you encounter problems or you have questions, you can address well-written documentation. If you still have problems, you can either directly write to the tech-support using a little bubble in the right-bottom of the site or you can create an issue in [GitHub](https://github.com/real-dev/real/issues). 
+
 I suggest you start with [Hello real world](https://real.dev/task/hello-real-world) task, as it helps you to get familiar with the whole process of submitting a task. After that, you can pick any task that you want and solve it using your _favorite programming language_.
  
 I liked this experience. I am planning to continue solving tasks when new ones will come out. By far, my favorite task was [Host My Stuff](https://real.dev/task/host-my-stuff). At first, I thought that it is a very hard task and I doubted that I could solve it. But in the end, it was not that difficult. I encourage you to try solving all tasks on your own because doing that helps you practice a **problem-solving** skill.
  
 Although this project in an early stage, it looks very promising and I am looking forward to its development!
  
-P.S. I am very proud of the fact that I am the first person that completed all of the tasks in three days. Here's a picture of the current leaderboard
+P.S. I am very proud of the fact that I am the first person that completed all of the tasks in three days. Here's a picture of the current leaderboard:
  
 ![Leaderboard](/images/uploads/solving-fun-problems-with-real-dev__leaderboard.png "Leaderboard")
