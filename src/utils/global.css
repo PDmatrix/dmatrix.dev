@@ -8,6 +8,11 @@ body {
     background-color: var(--bg);
 }
 
+body :not(pre) > code.language-text {
+    background-color: rgb(14, 30, 37);
+    color: #FFFFFF
+}
+
 .gatsby-highlight-code-line {
     background-color: hsla(298, 8%, 34%, 0.26);
     display: block;
