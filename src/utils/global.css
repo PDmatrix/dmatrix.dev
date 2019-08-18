@@ -13,6 +13,11 @@ body :not(pre) > code.language-text {
     color: #FFFFFF
 }
 
+.gatsby-resp-image-figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 .emoji {
     font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
 }
