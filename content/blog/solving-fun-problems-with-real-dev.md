@@ -8,11 +8,15 @@ tags:
 Hello everyone! [👋]{.emoji}
  
 Today, I want to tell you about a cool project called [**Real Dev**](https://real.dev)
+
+![Main page](/images/uploads/solving-fun-problems-with-real-dev__main.png "Main page")
  
 Real Dev is a platform for solving _real world-like_ problems, for example, creating backend API for a frontend application and so on. It's a great way to sharpen your skills as a software developer. Also, it can be used to improve your portfolio! If you like to solve programming puzzles, but you tired of algorithms and math you will like this project. [😊]{.emoji}
  
 To solve problems you start with picking a task. For now, there are only ten tasks, but in the future, there will be much more. Every task has its level of complexity from _easy_ to _hard_. 
  
+![Tasks](/images/uploads/solving-fun-problems-with-real-dev__tasks.png "Tasks")
+
 There are currently two main languages to write:
  
 * `Python`
