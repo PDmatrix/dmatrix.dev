@@ -1,6 +1,6 @@
 ---
 title: Solving fun problems with Real Dev
-date: 2019-08-17T16:21:28.027Z
+date: 2019-08-20T16:21:28.027Z
 description: 'Solving fun problems with Real Dev, great project for programmers!'
 tags:
   - fun
