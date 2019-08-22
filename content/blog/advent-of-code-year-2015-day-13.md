@@ -7,11 +7,11 @@ tags:
 ---
 ## --- Day 13: Knights of the Dinner Table ---
 
-In today's puzzle, we need to find optimal seating arrangement for a loving (hating) family.
+In today's puzzle, we need to find an optimal seating arrangement for a guests.
 
 ### Part 1
 
-In the first part we need to calculate get the right seat arrangement where total happiness would be the greatest. First, we need to get all the guests from the input.
+In the first part, we need to calculate the right seat arrangement where total happiness would be the greatest. First, we need to get all the guests from the input.
 
 ```csharp
 private static IEnumerable<string> GetGuests(IEnumerable<string> lines)
@@ -30,7 +30,7 @@ private static IEnumerable<string> GetGuests(IEnumerable<string> lines)
 }
 ```
 
-After that, we need to somehow represent units of happiness of all guests. I decided to use `Dictionary` where key is a guest name and the value is another `Dictionary` where stored other guests with units of happiness, e.g:
+After that, we need to somehow represent units of happiness of all guests. I decided to use `Dictionary` where the key is a guest name and the value is another `Dictionary` where stored other guests with units of happiness, e.g:
 
 ```json
 {
@@ -49,12 +49,12 @@ After that, we need to somehow represent units of happiness of all guests. I dec
 }
 ```
 
-Here's the code for this:
+Here's the code for this. In this function I also have `withMe` parameter, don't mind it now, we are going use it in the second part:
 
 ```csharp
 private static Dictionary<string, Dictionary<string, int>> GetUnits(IEnumerable<string> lines, bool withMe = false)
 {
-  const string pattern = 
+  const string pattern =
     @"(?<who>\w+) would (?<what>lose|gain) (?<by>\d+?) happiness units by sitting next to (?<with>\w+)";
   var res = new Dictionary<string, Dictionary<string, int>>();
   foreach (var line in lines)
@@ -84,14 +84,59 @@ private static Dictionary<string, Dictionary<string, int>> GetUnits(IEnumerable<
 }
 ```
 
- .First, we need to create permutations of all guests. To do that we can use function from the [ninth day](/advent-of-code-year-2015-day-9).
+Next thing, we need to create permutations of all guests. To do that we can use the method from the [ninth day](/advent-of-code-year-2015-day-9). After all that, we can easily compute the total happiness of all guest permutations and pick the highest value.
+
+```csharp
+public string Part1(IEnumerable<string> lines)
+{
+  var enumerable = lines as string[] ?? lines.ToArray();
+  var guests = GetGuests(enumerable).ToArray();
+  var units = GetUnits(enumerable);
+  var permutations = GetPer(guests);
+  return permutations.Select(r => Compute(r, units)).Max().ToString();
+}
+
+private static int Compute(IEnumerable<string> list,
+  IReadOnlyDictionary<string, Dictionary<string, int>> dictionary)
+{
+  var sum = 0;
+  var enumerable = list as string[] ?? list.ToArray();
+  for (var i = 0; i < enumerable.Length; i++)
+  {
+    if (i == 0)
+      sum += dictionary[enumerable[i]][enumerable.Last()];
+    else
+      sum += dictionary[enumerable[i]][enumerable[i - 1]];
+
+    if (i == enumerable.Length - 1)
+      sum += dictionary[enumerable[i]][enumerable.First()];
+    else
+      sum += dictionary[enumerable[i]][enumerable[i + 1]];
+  }
+
+  return sum;
+}
+```
 
 ### Part 2
 
-desc
+In the second part, we need to include ourselves in the guest list. As we already saw in the method `GetUnits` I have an optional parameter, called `withMe` which allows me to insert `Me` as a guest. After that, we adding new guest called `Me`. The rest of the code is the same as the first part:
 
 ```csharp
-code
+public string Part2(IEnumerable<string> lines)
+{
+  var enumerable = lines as string[] ?? lines.ToArray();
+  var guests = GetGuests(enumerable).ToList();
+  var units = GetUnits(enumerable, true);
+  units["Me"] = new Dictionary<string, int>();
+  foreach (var guest in guests)
+  {
+    units["Me"][guest] = 0;
+  }
+  guests.Add("Me");
+  var permutations = GetPer(guests.ToArray());
+  return permutations.Select(r => Compute(r, units)).Max().ToString();
+}
 ```
 
 - - -
