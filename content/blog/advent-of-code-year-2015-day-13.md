@@ -1,6 +1,6 @@
 ---
 title: Advent of Code. Year 2015. Day 13
-date: 2019-08-20T09:45:10.517Z
+date: 2019-08-24T09:45:10.517Z
 description: Solution to Advent of Code Year 2015 - Day 13
 tags:
   - aoc-2015
